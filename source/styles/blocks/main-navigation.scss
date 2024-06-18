@@ -1,0 +1,162 @@
+.main-navigation {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 40px;
+  }
+}
+
+.main-navigation__list {
+  @include list-style-none;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    position: static;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
+  }
+}
+
+.main-navigation__list--open {
+  display: block;
+}
+
+.main-navigation__item {
+  text-align: center;
+  border-bottom: 1px solid $base-secondary;
+
+  &:first-of-type {
+    border-top: 1px solid $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+
+    &:first-of-type {
+      border-top: none;
+    }
+  }
+}
+
+.main-navigation__link {
+  padding: 18px;
+  font-size: 12px;
+  display: block;
+  font-weight: 500;
+  color: $base-black;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 21px 28px;
+    letter-spacing: 0.05px;
+  }
+}
+
+.main-navigation__link--active {
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $base-primary;
+    color: $base-primary;
+  }
+}
+
+.main-navigation__user {
+  @include list-style-none;
+  display: flex;
+  margin-right: -20px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 22px;
+  }
+}
+
+.main-navigation__user-link {
+  width: 16px;
+  height: 16px;
+  padding: 22px;
+  display: block;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    padding: 32px 20px 32px 44px;
+    background-position: 21px;
+  }
+}
+
+.main-navigation__user-link--account {
+  background-image: url("../../icons/stack.svg#account-button");
+}
+
+.main-navigation__user-link--basket {
+  background-image: url("../../icons/stack.svg#basket-button");
+}
+
+.main-navigation__user-item--burger {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation__link-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    color: $base-black;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+  }
+}
+
+.main-navigation__user-button {
+  cursor: pointer;
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 22px;
+  border: none;
+  background-color: $base-white;
+  background-image: url("../../icons/stack.svg#burger-button");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation__user-button--close {
+  background-image: url("../../icons/stack.svg#burger-close-button");
+}
+

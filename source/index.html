@@ -2,16 +2,59 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Drink2go: Главная</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="#" type="font/woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">Шапка</header>
+    <header class="main-header" data-test="header">
+      <div class="main-header__wrapper main-wrapper">
+        <div class="main-header__logo-wrapper">
+          <a class="main-header__logo-link logo" href="index.html" aria-current="page">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/svg+xml" srcset="images/logo-drink2go-desktop.svg" width="170" height="36">
+              <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-drink2go-tablet.svg" width="82" height="36">
+              <img class="logo__image" src="images/logo-drink2go-mobile.svg" width="32" height="36" alt="Логотип компании Drink to go.">
+            </picture>
+          </a>
+          <p class="main-header__logo-description">Интернет-магазин кофейных напитков</p>
+        </div>
+        <nav class="main-header__navigation main-navigation">
+          <ul class="main-navigation__list"> <!-- Добавить класс main-navigation__list--open для открытия меню -->
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--active" aria-current="page">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Каталог</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">Доставка</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="#">О нас</a>
+            </li>
+          </ul>
+          <ul class="main-navigation__user">
+            <li class="main-navigation__user-item">
+              <a class="main-navigation__user-link main-navigation__user-link--account" href="#"><span class="main-navigation__link-text">Войти</span></a>
+            </li>
+            <li class="main-navigation__user-item">
+              <a class="main-navigation__user-link main-navigation__user-link--basket" href="#"><span class="main-navigation__link-text">Корзина</span></a>
+            </li>
+            <li class="main-navigation__user-item main-navigation__user-item--burger">
+              <button class="main-navigation__user-button" type="button"><span class="visually-hidden">Открыть меню.</span></button> <!-- Добавить класс для button main-navigation__user-button--close при открытии меню -->
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main>
-      <h1>Первые изменения</h1>
+      <!-- <h1>Первые изменения</h1> -->
     </main>
+    <footer>
+
+    </footer>
   </body>
 </html>
