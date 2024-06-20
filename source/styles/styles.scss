@@ -6,7 +6,12 @@
 @import "./common/visually-hidden.scss";
 
 /* BLOCKS */
+@import "./blocks/page.scss";
+@import "./blocks/button.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/main-wrapper.scss";
 @import "./blocks/logo.scss";
-@import "./blocks/main-navigation.scss"
+@import "./blocks/main-navigation.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/main-footer.scss";
