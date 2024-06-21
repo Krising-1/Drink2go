@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="#" type="font/woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="vendor/nouislider.min.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="main-header" data-test="header">
       <div class="main-header__wrapper main-wrapper">
         <div class="main-header__logo-wrapper">
-          <a class="main-header__logo-link logo" href="index.html" aria-current="page">
+          <a class="main-header__logo-link" href="index.html" aria-current="page">
             <picture>
               <source media="(min-width: 1440px)" type="image/svg+xml" srcset="images/logo-drink2go-desktop.svg" width="170" height="36">
               <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-drink2go-tablet.svg" width="82" height="36">
-              <img class="logo__image" src="images/logo-drink2go-mobile.svg" width="32" height="36" alt="Логотип компании Drink to go.">
+              <img class="main-header__logo-image" src="images/logo-drink2go-mobile.svg" width="32" height="36" alt="Логотип компании Drink to go.">
             </picture>
           </a>
           <p class="main-header__logo-description">Интернет-магазин кофейных напитков</p>
@@ -122,10 +123,10 @@
           <button class="hero__swipe-button hero__swipe-button--right" type="button"><span class="visually-hidden">Переключение слайда вправо.</span></button>
         </div>
       </section>
-      <section class="main__advantages advantages">
+      <section class="main__advantages advantages" data-test="features">
         <div class="advantages__wrapper main-wrapper">
-          <h2 class="advantages__title">Преимущества</h2>
-          <p class="advantages__description">Главные причины выбрать Drink2Go</p>
+          <p class="advantages__short-title short-title">Преимущества</p>
+          <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--time">
               <h3 class="advantages__item-title">Скорость</h3>
@@ -146,10 +147,97 @@
           </ul>
         </div>
       </section>
+      <section class="main__catalog catalog" data-test="catalog">
+        <div class="catalog__wrapper main-wrapper">
+          <p class="catalog__short-title short-title">Каталог</p>
+          <h2 class="catalogs__title">Каталог кофейных напитков</h2>
+          <form class="catalog__form product-form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="product-form__fieldset product-form__fieldset--price ">
+              <legend class="product-form__fieldset-title">Цена</legend>
+              <div class="product-form__slider slider">
+                <div class="slider__init-slider"></div> <!-- Добавить data-disabled="true" для состояния disabled -->
+                <div class="slider__inputs-wrapper">
+                  <input class="slider__input slider__input--min" type="number" min="0" max="900" value="0" placeholder="0">
+                  <div class="slider__separator"></div>
+                  <input class="slider__input slider__input--max" type="number" min="0" max="900" value="900">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="product-form__fieldset product-form__fieldset--milk-availability">
+              <legend class="product-form__fieldset-title product-form__fieldset-title--milk-availability">Наличие молока</legend>
+              <label class="product-form__label">
+                <input class="product-form__radio visually-hidden" type="radio" name="milk-availability" value="never-mind" checked>
+                <span class="product-form__custom-radio"></span>
+                <span class="product-form__label-text">Неважно</span>
+              </label>
+              <label class="product-form__label">
+                <input class="product-form__radio visually-hidden" type="radio" name="milk-availability" value="only-animal">
+                <span class="product-form__custom-radio"></span>
+                <span class="product-form__label-text">Только животное</span>
+              </label>
+              <label class="product-form__label">
+                <input class="product-form__radio visually-hidden" type="radio" name="milk-availability" value="only-vegetable">
+                <span class="product-form__custom-radio"></span>
+                <span class="product-form__label-text">Только растительное</span>
+              </label>
+              <label class="product-form__label">
+                <input class="product-form__radio visually-hidden" type="radio" name="milk-availability" value="dairy-free" disabled>
+                <span class="product-form__custom-radio"></span>
+                <span class="product-form__label-text">Без молока</span>
+              </label>
+            </fieldset>
+            <fieldset class="product-form__fieldset product-form__fieldset--country">
+              <legend class="product-form__fieldset-title product-form__fieldset-title--country">Страна произрастания</legend>
+              <label class="product-form__label product-form__label--country">
+                <input class="product-form__checkbox visually-hidden" type="checkbox" name="brazil" checked>
+                <span class="product-form__custom-checkbox"></span>
+                <span class="product-form__label-text">Бразилия</span>
+              </label>
+              <label class="product-form__label product-form__label--country">
+                <input class="product-form__checkbox visually-hidden" type="checkbox" name="brazil">
+                <span class="product-form__custom-checkbox"></span>
+                <span class="product-form__label-text">Эфиопия</span>
+              </label>
+              <label class="product-form__label product-form__label--country">
+                <input class="product-form__checkbox visually-hidden" type="checkbox" name="colombia">
+                <span class="product-form__custom-checkbox"></span>
+                <span class="product-form__label-text">Колумбия</span>
+              </label>
+              <label class="product-form__label product-form__label--country">
+                <input class="product-form__checkbox visually-hidden" type="checkbox" name="costa-rica">
+                <span class="product-form__custom-checkbox"></span>
+                <span class="product-form__label-text">Коста-Рика</span>
+              </label>
+              <label class="product-form__label product-form__label--country">
+                <input class="product-form__checkbox visually-hidden" type="checkbox" name="peru" disabled>
+                <span class="product-form__custom-checkbox"></span>
+                <span class="product-form__label-text">Перу</span>
+              </label>
+            </fieldset>
+            <div class="product-form__button-wrapper">
+              <button class="product-form__button product-form__button--submit button" type="submit">Применить</button>
+              <button class="product-form__button product-form__button--reset button" type="reset">Сбросить</button>
+            </div>
+          </form>
+          <div class="catalog__sorting-wrapper">
+            <p class="catalog__sorting-description">Сортировка:</p>
+            <div class="catalog__sorting-container">
+              <select class="catalog__sorting" aria-label="Сортировка товаров.">
+                <option class="catalog__sorting-item">по умолчанию</option>
+                <option class="catalog__sorting-item">по возрастанию</option>
+                <option class="catalog__sorting-item">по убыванию</option>
+              </select>
+              <span class="catalog__sorting-arrow"></span>
+            </div>
+            </div>
+          </div>
+        </h2>
+      </section>
     </main>
     <footer class="main-footer">
       <!-- <div class="main-foot__test">
       </div> -->
     </footer>
+    <script src="./vendor/nouislider.min.js"></script>
   </body>
 </html>

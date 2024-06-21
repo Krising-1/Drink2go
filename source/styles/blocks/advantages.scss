@@ -16,26 +16,18 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 101px;
+    padding-top: 100px;
     padding-bottom: 120px;
   }
 }
 
-.advantages__title {
-  font-size: 12px;
-  line-height: 16px;
-  color: $base-primary;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 5px;
-  letter-spacing: 0.5px;
-
+.advantages__short-title {
   @media (min-width: $tablet-width) {
     margin-bottom: 4px;
   }
 }
 
-.advantages__description {
+.advantages__title {
   font-size: 24px;
   line-height: 36px;
   font-weight: 600;

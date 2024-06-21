@@ -8,10 +8,10 @@ const CardSteps = {
 };
 
 const hero = document.querySelector('.hero');
-const buttonLeft = document.querySelector('.hero__swipe-button--left');
-const buttonRight = document.querySelector('.hero__swipe-button--right');
-const productList = document.querySelectorAll('.hero__product-item');
-const pagination = document.querySelectorAll('.hero__button-stage');
+const buttonLeft = hero.querySelector('.hero__swipe-button--left');
+const buttonRight = hero.querySelector('.hero__swipe-button--right');
+const productList = hero.querySelectorAll('.hero__product-item');
+const pagination = hero.querySelectorAll('.hero__button-stage');
 
 
 let CardColors;

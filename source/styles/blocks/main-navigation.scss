@@ -63,11 +63,6 @@
   text-transform: uppercase;
   text-decoration: none;
 
-  @media (min-width: $tablet-width) {
-    padding: 30px 21px 28px;
-    letter-spacing: 0.05px;
-  }
-
   &:hover,
   &:focus-visible {
     color: $base-primary;
@@ -76,6 +71,15 @@
   &:active {
     color: $base-primary;
     background-color: $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 21px 28px;
+    letter-spacing: 0.05px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 31px;
   }
 }
 
@@ -126,7 +130,7 @@
     width: auto;
     height: auto;
     text-decoration: none;
-    padding: 32px 20px 32px 44px;
+    padding: 33px 20px 32px 44px;
     background-position: 21px;
   }
 }
