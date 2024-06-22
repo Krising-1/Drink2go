@@ -1,6 +1,14 @@
 .slider__init-slider {
   margin-bottom: 20px;
   margin-left: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 18px;
+  }
 }
 
 /* stylelint-disable */
@@ -98,6 +106,7 @@
   font-weight: 500;
   font-family: $primary-font;
   appearance: none;
+  overflow: hidden;
 
   &:hover,
   &:focus-visible {
@@ -107,6 +116,14 @@
   &:disabled {
     border-color: #e5e5e5;
     color: $base-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
   }
 }
 

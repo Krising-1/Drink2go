@@ -109,9 +109,21 @@
   height: 16px;
   padding: 22px;
   display: block;
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: absolute;
+    background-color: $base-black;
+
+    @media (min-width: $desktop-width) {
+      top: 32px;
+      left: 21px;
+    }
+  }
 
   &:hover,
   &:focus-visible {
@@ -135,12 +147,24 @@
   }
 }
 
+.main-navigation__user-link:hover::after,
+.main-navigation__user-link:focus-visible::after,
+.main-navigation__user-link:active::after {
+  @media (min-width: $desktop-width) {
+    background-color: $base-primary;
+  }
+}
+
 .main-navigation__user-link--account {
-  background-image: url("../../icons/stack.svg#account-button");
+  &::after {
+    mask-image: url("../../icons/stack.svg#account-button");
+  }
 }
 
 .main-navigation__user-link--basket {
-  background-image: url("../../icons/stack.svg#basket-button");
+  &::after {
+    mask-image: url("../../icons/stack.svg#basket-button");
+  }
 }
 
 .main-navigation__user-link:hover .main-navigation__link-text,
