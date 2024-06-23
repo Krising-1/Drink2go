@@ -40,11 +40,12 @@
     font-size: 42px;
     line-height: 64px;
     margin-bottom: 61px;
-    letter-spacing: 0.5px;
+    letter-spacing: -0.1px;
+    font-weight: 700;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 81px;
+    margin-bottom: 80px;
   }
 }
 

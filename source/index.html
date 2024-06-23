@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <title>Drink2go: Главная</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/favicon-svg.svg" type="image/svg+xml">
+    <link rel="icon" href="favicons/favicon32x32.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="vendor/nouislider.min.css">
-    <script src="scripts/index.js" defer></script>
+    <link rel="preload" href="#" type="font/woff2" as="font">
+    <script src="scripts/index.js" defer="defer"></script>
   </head>
   <body class="page__body">
     <header class="main-header" data-test="header">
@@ -23,9 +27,9 @@
           <p class="main-header__logo-description">Интернет-магазин кофейных напитков</p>
         </div>
         <nav class="main-header__navigation main-navigation">
-          <ul class="main-navigation__list"> <!-- Добавить класс main-navigation__list--open для открытия меню -->
+          <ul class="main-navigation__list"><!-- Добавить класс main-navigation__list--open для открытия меню -->
             <li class="main-navigation__item">
-              <a class="main-navigation__link main-navigation__link--active" aria-current="page">Главная</a>
+              <a class="main-navigation__link main-navigation__link--active" href="#" aria-current="page">Главная</a>
             </li>
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="#">Каталог</a>
@@ -45,7 +49,7 @@
               <a class="main-navigation__user-link main-navigation__user-link--basket" href="#"><span class="main-navigation__link-text">Корзина</span></a>
             </li>
             <li class="main-navigation__user-item main-navigation__user-item--burger">
-              <button class="main-navigation__user-button js-toggle-button" type="button"><span class="visually-hidden">Открыть меню.</span></button> <!-- Добавить класс для button main-navigation__user-button--close при открытии меню -->
+              <button class="main-navigation__user-button js-toggle-button" type="button"><span class="visually-hidden">Открыть меню.</span></button><!-- Добавить класс для button main-navigation__user-button--close при открытии меню -->
             </li>
           </ul>
         </nav>
@@ -72,7 +76,7 @@
                 <p class="hero__product-description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
                 <div class="hero__product-price-wrapper">
                   <p class="hero__product-price"><del class="hero__product-old-price">295₽</del>225₽</p>
-                  <button class="hero__product-button button">Заказать</button>
+                  <button class="hero__product-button button" type="button">Заказать</button>
                 </div>
               </div>
             </li>
@@ -91,7 +95,7 @@
                 <p class="hero__product-description">Невероятное сочетание перуанской высокогорной арабики с&nbsp;молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
                 <div class="hero__product-price-wrapper">
                   <p class="hero__product-price"><del class="hero__product-old-price">285₽</del>265₽</p>
-                  <button class="hero__product-button button" tabindex="-1">Заказать</button>
+                  <button class="hero__product-button button" tabindex="-1" type="button">Заказать</button>
                 </div>
               </div>
             </li>
@@ -110,13 +114,13 @@
                 <p class="hero__product-description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
                 <div class="hero__product-price-wrapper">
                   <p class="hero__product-price"><del class="hero__product-old-price">395₽</del>375₽</p>
-                  <button class="hero__product-button button" tabindex="-1">Заказать</button>
+                  <button class="hero__product-button button" tabindex="-1" type="button">Заказать</button>
                 </div>
               </div>
             </li>
           </ol>
           <div class="hero__button-stage-wrapper">
-            <button class="hero__button-stage hero__button-stage--active" type="button"><span class="visually-hidden">Первый слайд.</span></button> <!--Для активного состояния добавить класс hero__button-stage--active -->
+            <button class="hero__button-stage hero__button-stage--active" type="button"><span class="visually-hidden">Первый слайд.</span></button><!-- Для активного состояния добавить класс hero__button-stage--active -->
             <button class="hero__button-stage" type="button"><span class="visually-hidden">Второй слайд.</span></button>
             <button class="hero__button-stage" type="button"><span class="visually-hidden">Третий слайд.</span></button>
           </div>
@@ -150,17 +154,19 @@
       <section class="main__catalog catalog" data-test="catalog">
         <div class="catalog__wrapper main-wrapper">
           <p class="catalog__short-title short-title">Каталог</p>
-          <h2 class="catalogs__title">Каталог кофейных напитков</h2>
-          <div class="catalogs__desktop-wrapper">
+          <h2 class="catalog__title">Каталог кофейных напитков</h2>
+          <div class="catalog__desktop-wrapper">
             <form class="catalog__form product-form" action="https://echo.htmlacademy.ru" method="post">
               <fieldset class="product-form__fieldset product-form__fieldset--price ">
                 <legend class="product-form__fieldset-title">Цена</legend>
                 <div class="product-form__slider slider">
-                  <div class="slider__init-slider"></div> <!-- Добавить data-disabled="true" для состояния disabled -->
+                  <div class="slider__init-slider"></div><!-- Добавить data-disabled="true" для состояния disabled -->
                   <div class="slider__inputs-wrapper">
-                    <input class="slider__input slider__input--min" type="number" name="min-cost" min="0" max="900" value="0" placeholder="0">
+                    <label class="visually-hidden" for="min-cost">Минимальная цена.</label>
+                    <label class="visually-hidden" for="max-cost">Максимальная цена.</label>
+                    <input class="slider__input slider__input--min" id="min-cost" type="number" name="min-cost" min="0" max="900" value="0" placeholder="0">
                     <div class="slider__separator"></div>
-                    <input class="slider__input slider__input--max" type="number" name="max-cost" min="0" max="900" value="900">
+                    <input class="slider__input slider__input--max" id="max-cost" type="number" name="max-cost" min="0" max="900" value="900">
                   </div>
                 </div>
               </fieldset>
@@ -224,7 +230,7 @@
               <div class="catalog__sorting-wrapper">
                 <p class="catalog__sorting-description">Сортировка:</p>
                 <div class="catalog__sorting-container">
-                  <select class="catalog__sorting" aria-label="Сортировка товаров.">
+                  <select class="catalog__sorting" aria-label="Сортировка товаров." name="sorting">
                     <option class="catalog__sorting-item">по умолчанию</option>
                     <option class="catalog__sorting-item">по возрастанию</option>
                     <option class="catalog__sorting-item">по убыванию</option>
@@ -242,7 +248,7 @@
                   <p class="product-catalog__card-description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                   <div class="product-catalog__price-wrapper">
                     <p class="product-catalog__price">225₽</p>
-                    <button class="product-catalog__button button">В корзину</button>
+                    <button class="product-catalog__button button" type="button">В корзину</button>
                   </div>
                 </li>
                 <li class="product-catalog__card">
@@ -254,7 +260,7 @@
                   <p class="product-catalog__card-description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                   <div class="product-catalog__price-wrapper">
                     <p class="product-catalog__price">225₽</p>
-                    <button class="product-catalog__button button">В корзину</button>
+                    <button class="product-catalog__button button" type="button">В корзину</button>
                   </div>
                 </li>
                 <li class="product-catalog__card">
@@ -266,7 +272,7 @@
                   <p class="product-catalog__card-description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                   <div class="product-catalog__price-wrapper">
                     <p class="product-catalog__price">225₽</p>
-                    <button class="product-catalog__button button">В корзину</button>
+                    <button class="product-catalog__button button" type="button">В корзину</button>
                   </div>
                 </li>
                 <li class="product-catalog__card">
@@ -278,7 +284,7 @@
                   <p class="product-catalog__card-description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                   <div class="product-catalog__price-wrapper">
                     <p class="product-catalog__price">225₽</p>
-                    <button class="product-catalog__button button">В корзину</button>
+                    <button class="product-catalog__button button" type="button">В корзину</button>
                   </div>
                 </li>
                 <li class="product-catalog__card">
@@ -290,7 +296,7 @@
                   <p class="product-catalog__card-description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                   <div class="product-catalog__price-wrapper">
                     <p class="product-catalog__price">225₽</p>
-                    <button class="product-catalog__button button">В корзину</button>
+                    <button class="product-catalog__button button" type="button">В корзину</button>
                   </div>
                 </li>
                 <li class="product-catalog__card">
@@ -302,7 +308,7 @@
                   <p class="product-catalog__card-description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                   <div class="product-catalog__price-wrapper">
                     <p class="product-catalog__price">225₽</p>
-                    <button class="product-catalog__button button">В корзину</button>
+                    <button class="product-catalog__button button" type="button">В корзину</button>
                   </div>
                 </li>
               </ul>
@@ -319,13 +325,14 @@
                     <button class="catalog__pagination-list-button" type="button">3</button>
                   </li>
                 </ol>
-                <button class="catalog__pagination-button catalog__pagination-button--forward" aria-label="Следующая страница каталога."><span class="catalog__button-description">Вперёд</span></button>
+                <button class="catalog__pagination-button catalog__pagination-button--forward" type="button" aria-label="Следующая страница каталога."><span class="catalog__button-description">Вперёд</span></button>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section class="main__map" data-test="map">
+        <h2 class="visually-hidden">Где мы находимся на карте.</h2>
         <picture>
           <source media="(min-width: 1440px)" type="image/webp" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1440" height="540">
           <source media="(min-width: 768px)" type="image/webp" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" width="768" height="480">
@@ -337,13 +344,14 @@
       </section>
     </main>
     <footer class="main-footer" data-test="footer">
+      <h2 class="visually-hidden">Наши контакты и социальные сети.</h2>
       <div class="main-footer-wrapper">
         <div class="main-footer__social-wrapper">
           <div class="main-footer__logo-wrapper">
             <a class="main-footer__logo-link" href="index.html" aria-current="page">
               <picture>
                 <source media="(min-width: 768px)" type="image/svg+xml" srcset="images/logo-drink2go-desktop.svg" width="170" height="36">
-                <img class="main-footer__logo-image" src="images/logo-drink2go-tablet.svg"width="82" height="36"" alt="Логотип компании Drink to go.">
+                <img class="main-footer__logo-image" src="images/logo-drink2go-tablet.svg" width="82" height="36" alt="Логотип компании Drink to go.">
               </picture>
             </a>
             <p class="main-footer__logo-description">Интернет-магазин кофейных напитков</p>
@@ -363,7 +371,7 @@
         <ul class="main-footer__column-list">
           <li class="main-footer__column-item">
             <div class="main-footer__column-item-container">
-              <h2 class="main-footer__links-title">Интернет-магазин</h2>
+              <h3 class="main-footer__links-title">Интернет-магазин</h3>
               <ul class="main-footer__link-list">
                 <li class="main-footer__link-item">
                   <a class="main-footer__link-social" href="#">Каталог</a>
@@ -382,7 +390,7 @@
           </li>
           <li class="main-footer__column-item">
             <div class="main-footer__column-item-container">
-              <h2 class="main-footer__links-title">Медиа</h2>
+              <h3 class="main-footer__links-title">Медиа</h3>
               <ul class="main-footer__link-list">
                 <li class="main-footer__link-item">
                   <a class="main-footer__link-social" href="#">Блог</a>
@@ -398,7 +406,7 @@
           </li>
           <li class="main-footer__column-item">
             <div class="main-footer__column-item-container main-footer__column-item-container--contacts">
-              <h2 class="main-footer__links-title main-footer__links-title--contacts">Контакты</h2>
+              <h3 class="main-footer__links-title main-footer__links-title--contacts">Контакты</h3>
               <ul class="main-footer__link-list">
                 <li class="main-footer__link-item">
                   <a class="main-footer__link-social" href="https://yandex.ru/maps/-/CDvwUTzA">
