@@ -75,6 +75,7 @@
   gap: 9px;
   margin-left: 3px;
   margin-bottom: 20px;
+  max-width: 150px;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
@@ -82,11 +83,20 @@
     margin-right: 5px;
     gap: 10px;
     margin-bottom: 26px;
+    max-width: none;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 29px;
     gap: 12px;
+  }
+
+  @-moz-document url-prefix() {
+    margin-bottom: 22px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 27px;
+    }
   }
 }
 
@@ -142,6 +152,16 @@
     padding-top: 0;
     padding-bottom: 0;
   }
+
+  @-moz-document url-prefix() {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 2px 12px;
+
+    @media (min-width: $desktop-width) {
+      padding: 0 14px;
+    }
+  }
 }
 
 .catalog__sorting:active + .catalog__sorting-arrow {
@@ -185,6 +205,8 @@
   border: none;
   border-radius: 4px;
   font-family: $primary-font;
+  overflow: hidden;
+  text-wrap: nowrap;
 
   &:hover,
   &:focus-visible {

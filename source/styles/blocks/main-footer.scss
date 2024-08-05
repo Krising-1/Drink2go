@@ -22,6 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 20px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -77,6 +78,7 @@
   gap: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     margin-top: 39px;
@@ -94,32 +96,25 @@
   width: 40px;
   height: 40px;
   padding: 9px;
-  mask-size: 20px 20px;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  background-color: $base-grey;
+  border-radius: 4px;
+
 
   &:hover,
   &:focus-visible {
-    background-color: $primary-lighter;
+    background-color: $base-secondary;
   }
 
   &:active {
-    background-color: $primary-darker;
+    background-color: $primary-Opacity025;
   }
 }
 
-.main-footer__social-link--vk {
-  mask-image: url("../../icons/stack.svg#footer-vk");
+.main-footer__social-link:hover .main-footer__social-image {
+  color: $base-primary;
 }
 
-.main-footer__social-link--pinterest {
-  mask-size: 22px 22px;
-  mask-image: url("../../icons/stack.svg#footer-pinterest");
-}
-
-.main-footer__social-link--odnoklassniki {
-  mask-image: url("../../icons/stack.svg#footer-odnoklassniki");
+.main-footer__social-image {
+  color: $base-grey;
 }
 
 .main-footer__column-list {
@@ -285,23 +280,13 @@
 .main-footer__watermark {
   margin: 0;
   text-align: center;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 15px;
+  line-height: 20px;
   padding-right: 17px;
-  color: $base-grey;
+  color: $base-black;
   position: relative;
   display: block;
   text-decoration: none;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 12px;
-    height: 16px;
-    right: 37px;
-    mask-image: url("../../icons/stack.svg#logo-footer-htmlacademy");
-    background-color: $base-grey;
-  }
 
   &:hover,
   &:focus-visible {
@@ -311,13 +296,4 @@
   &:active {
     color: $primary-darker;
   }
-}
-
-.main-footer__watermark:hover::after,
-.main-footer__watermark:focus-visible::after {
-  background-color: $base-primary;
-}
-
-.main-footer__watermark:active::after {
-  background-color: $primary-darker;
 }

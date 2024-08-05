@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <title>Drink2go: Главная</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Магазин кофейных напитков Drink2Go. У нас большой ассортимент готовых экологичных напитков!">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicons/favicon-svg.svg" type="image/svg+xml">
     <link rel="icon" href="favicons/favicon32x32.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preload" href="#" type="font/woff2" as="font">
-    <script src="scripts/index.js" defer="defer"></script>
+    <link rel="preload" href="./fonts/montserrat-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/montserrat-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
-    <header class="main-header" data-test="header">
+    <header class="main-header">
       <div class="main-header__wrapper main-wrapper">
         <div class="main-header__logo-wrapper">
           <a class="main-header__logo-link" href="index.html" aria-current="page">
@@ -43,10 +46,10 @@
           </ul>
           <ul class="main-navigation__user">
             <li class="main-navigation__user-item">
-              <a class="main-navigation__user-link main-navigation__user-link--account" href="#"><span class="main-navigation__link-text">Войти</span></a>
+              <a class="main-navigation__user-link main-navigation__user-link--account" aria-label="Войти." href="#"><span class="main-navigation__link-text">Войти</span></a>
             </li>
             <li class="main-navigation__user-item">
-              <a class="main-navigation__user-link main-navigation__user-link--basket" href="#"><span class="main-navigation__link-text">Корзина</span></a>
+              <a class="main-navigation__user-link main-navigation__user-link--basket" aria-label="Корзина." href="#"><span class="main-navigation__link-text">Корзина</span></a>
             </li>
             <li class="main-navigation__user-item main-navigation__user-item--burger">
               <button class="main-navigation__user-button js-toggle-button" type="button"><span class="visually-hidden">Открыть меню.</span></button><!-- Добавить класс для button main-navigation__user-button--close при открытии меню -->
@@ -56,7 +59,7 @@
       </div>
     </header>
     <main class="main">
-      <section class="main__hero hero" data-test="hero">
+      <section class="main__hero hero">
         <h1 class="visually-hidden">Товары Drink to go!</h1>
         <div class="hero__wrapper main-wrapper slider-pagination">
           <button class="hero__swipe-button hero__swipe-button--left slider-button-prev" type="button"><span class="visually-hidden">Переключение слайда влево.</span></button>
@@ -127,7 +130,7 @@
           <button class="hero__swipe-button hero__swipe-button--right slider-button-next" type="button"><span class="visually-hidden">Переключение слайда вправо.</span></button>
         </div>
       </section>
-      <section class="main__advantages advantages" data-test="features">
+      <section class="main__advantages advantages">
         <div class="advantages__wrapper main-wrapper">
           <p class="advantages__short-title short-title">Преимущества</p>
           <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
@@ -151,7 +154,7 @@
           </ul>
         </div>
       </section>
-      <section class="main__catalog catalog" data-test="catalog">
+      <section class="main__catalog catalog">
         <div class="catalog__wrapper main-wrapper">
           <p class="catalog__short-title short-title">Каталог</p>
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
@@ -331,7 +334,7 @@
           </div>
         </div>
       </section>
-      <section class="main__map" data-test="map">
+      <section class="main__map">
         <h2 class="visually-hidden">Где мы находимся на карте.</h2>
         <picture>
           <source media="(min-width: 1440px)" type="image/webp" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1440" height="540">
@@ -343,7 +346,7 @@
         </picture>
       </section>
     </main>
-    <footer class="main-footer" data-test="footer">
+    <footer class="main-footer">
       <h2 class="visually-hidden">Наши контакты и социальные сети.</h2>
       <div class="main-footer-wrapper">
         <div class="main-footer__social-wrapper">
@@ -358,13 +361,28 @@
           </div>
           <ul class="main-footer__social-list">
             <li class="main-footer__social-item">
-              <a class="main-footer__social-link main-footer__social-link--vk" href="#"><span class="visually-hidden">Вконтакте.</span></a>
+              <a class="main-footer__social-link main-footer__social-link--vk" href="https://vk.com/krising">
+                <span class="visually-hidden">Вконтакте.</span>
+                <svg class="main-footer__social-image" aria-hidden="true" focusable="false" width="20" height="20">
+                  <use href="icons/stack.svg#footer-vk"></use>
+                </svg>
+              </a>
             </li>
             <li class="main-footer__social-item">
-              <a class="main-footer__social-link main-footer__social-link--pinterest" href="#"><span class="visually-hidden">Pinterest.</span></a>
+              <a class="main-footer__social-link main-footer__social-link--pinterest" href="#">
+                <span class="visually-hidden">Pinterest.</span>
+                <svg class="main-footer__social-image" aria-hidden="true" focusable="false" width="22" height="22">
+                  <use href="icons/stack.svg#footer-pinterest"></use>
+                </svg>
+              </a>
             </li>
             <li class="main-footer__social-item">
-              <a class="main-footer__social-link main-footer__social-link--odnoklassniki" href="#"><span class="visually-hidden">Одноклассники.</span></a>
+              <a class="main-footer__social-link main-footer__social-link--odnoklassniki" href="#">
+                <span class="visually-hidden">Одноклассники.</span>
+                <svg class="main-footer__social-image" aria-hidden="true" focusable="false" width="20" height="20">
+                  <use href="icons/stack.svg#footer-odnoklassniki"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -421,10 +439,10 @@
           </li>
         </ul>
         <div class="main-footer__watermark-container">
-          <a class="main-footer__watermark" href="#">Разработано в <span class="main-footer__watermark-logo-text">HTML Academy</span></a>
+          <a class="main-footer__watermark" href="https://t.me/krising">By <span class="main-footer__watermark-logo-text">Semyon Klimov</span></a>
         </div>
       </div>
     </footer>
-    <script src="./vendor/nouislider.min.js"></script>
+    <script src="scripts/index.js" type="module"></script>
   </body>
 </html>

@@ -125,6 +125,7 @@
 
 .hero__product-image {
   margin-bottom: 5px;
+  object-fit: contain;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -151,14 +152,16 @@
     flex-grow: 1;
     align-items: flex-start;
     margin-top: 150px;
+    max-width: 625px;
   }
 }
 
 .hero__new-text {
+  text-align: center;
   font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
-  color: $base-primary;
+  color: $primary-darker;
   letter-spacing: 0.5px;
   margin-bottom: 4px;
 }
@@ -228,7 +231,7 @@
   font-size: 16px;
   line-height: 32px;
   font-weight: 400;
-  color: $base-primary;
+  color: $primary-darker;
   text-decoration: line-through solid 1px $base-primary;
   margin-right: 6px;
 }

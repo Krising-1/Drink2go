@@ -105,6 +105,10 @@
 
 .product-form__radio:disabled + .product-form__custom-radio {
   border-color: $light-grey;
+
+  &::after {
+    background-color: transparent;
+  }
 }
 
 .product-form__radio:disabled:checked + .product-form__custom-radio {
@@ -177,6 +181,8 @@
 
 .product-form__checkbox:disabled + .product-form__custom-checkbox {
   background-color: $light-grey;
+  pointer-events: none;
+  outline: none;
 
   &::after {
     background-color: $lightest-grey;
@@ -185,6 +191,7 @@
 
 .product-form__checkbox:disabled ~ .product-form__label-text {
   color: $base-grey;
+  pointer-events: none;
 }
 
 .product-form__checkbox:disabled:checked + .product-form__custom-checkbox {
@@ -206,6 +213,7 @@
   @media (min-width: $tablet-width) {
     width: 728px;
     justify-content: center;
+    row-gap: 20px;
   }
 
   @media (min-width: $desktop-width) {

@@ -37,6 +37,17 @@
       "section": "hero"
     },
     {
+      "label": "index features check hover size",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "onReadyScript": "markup-interaction-hover.js",
+      "hideSelectors": [
+        "body > *"
+      ],
+      "requireSameDimensions": false,
+      "section": "features"
+    },
+    {
       "label": "index catalog check hover size",
       "url": "http://localhost:3000/index.html",
       "referenceUrl": "./reference/index.html",
@@ -79,6 +90,17 @@
       ],
       "requireSameDimensions": false,
       "section": "hero"
+    },
+    {
+      "label": "index features check active size",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "onReadyScript": "markup-interaction-active.js",
+      "hideSelectors": [
+        "body > *"
+      ],
+      "requireSameDimensions": false,
+      "section": "features"
     },
     {
       "label": "index catalog check active size",

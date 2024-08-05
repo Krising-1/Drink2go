@@ -61,6 +61,20 @@
       "misMatchThreshold": 5
     },
     {
+      "label": "index features TEST-05. Шрифты.",
+      "url": "http://localhost:3000/index.html",
+      "referenceUrl": "./reference/index.html",
+      "selectors": [],
+      "content": [
+        "Преимущества",
+        "Главные причины",
+        "Скорость",
+        "Готовый напиток всегда"
+      ],
+      "onReadyScript": "textStylesOnly.js",
+      "misMatchThreshold": 5
+    },
+    {
       "label": "index catalog TEST-05. Шрифты.",
       "url": "http://localhost:3000/index.html",
       "referenceUrl": "./reference/index.html",

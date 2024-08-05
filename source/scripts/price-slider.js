@@ -1,3 +1,5 @@
+import '../vendor/nouislider.min.js';
+
 const priceSlider = document.querySelector('.slider__init-slider');
 const inputs = document.querySelectorAll('.slider__input');
 
@@ -52,5 +54,9 @@ const initSlider = () => {
   }
 };
 
+const addAria = () => {
+  priceSlider.querySelector('.noUi-handle-lower').setAttribute('aria-label', 'Минимальный уровень цены.');
+  priceSlider.querySelector('.noUi-handle-upper').setAttribute('aria-label', 'Максимальный уровень цены.');
+};
 
-initSlider();
+export { initSlider, addAria };
